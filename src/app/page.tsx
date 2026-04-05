@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link"
 import {
   ArrowRight,
   Brain,
@@ -63,7 +64,9 @@ export default function Home() {
             </a>
           </nav>
 
-          <Button className="h-9 bg-blue-600 px-4 text-sm text-white hover:bg-blue-700">Testar grátis</Button>
+          <Button asChild className="h-9 bg-blue-600 px-4 text-sm text-white hover:bg-blue-700">
+            <Link href="/dashboard">Entrar no app</Link>
+          </Button>
         </div>
       </header>
 
@@ -87,9 +90,11 @@ export default function Home() {
           <p className="mb-10 text-sm font-medium text-blue-700">{HERO.socialProof}</p>
 
           <div className="mb-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700">
-              Começar agora — 7 dias grátis
-              <ArrowRight className="ml-2 h-4 w-4" />
+            <Button asChild size="lg" className="bg-blue-600 text-white hover:bg-blue-700">
+              <Link href="/dashboard">
+                Começar agora — 7 dias grátis
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
             <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 px-4 py-2 text-sm text-gray-600">
               <Shield className="h-4 w-4" />
@@ -176,9 +181,11 @@ export default function Home() {
           <p className="mb-8 text-lg opacity-90">
             Ative seu teste grátis agora e veja sua rotina ficar mais clara já nos primeiros dias.
           </p>
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-50">
-            Ativar teste gratuito
-            <ArrowRight className="ml-2 h-4 w-4" />
+          <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-50">
+            <Link href="/dashboard">
+              Ativar teste gratuito
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
           </Button>
         </div>
       </section>
